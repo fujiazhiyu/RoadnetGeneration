@@ -130,3 +130,6 @@ dmypy.json
 
 # models
 *.pt
+
+# mac file
+*.DS_Store

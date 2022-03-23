@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Draw a picture!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+
+<body style="background-color: #E5E4E5;;overflow-x: hidden;">
+    <div class="example">
+        <h3>Example</h3>
+        <h4>first model data example</h4>
+        <img src="{{ url_for('static', filename='image/input_sample_first_model.png') }}"/>
+        <h4>second model data example</h4>
+        <img src="{{ url_for('static', filename='image/input_sample_second_model.png') }}"/>
+    </div>
+    <div style="margin-top:10px;">
+        <div style="width:50px;float:left;">
+            <ul id="toolsul" class="tools">
+                <li id="toolsPencil" data-type="move">
+                    <i class="icon-tools icon-move-black" data-default='icon-tools icon-move-black'></i>
+                </li>
+                <li data-type="line" class="active">
+                    <i class="icon-tools icon-line-select" data-default='icon-tools icon-line-black'></i>
+                </li>
+                <li data-type="polygon">
+                    <i class="icon-tools icon-rightangle-black" data-default='icon-tools icon-rightangle-black'></i>
+                </li>
+                <li data-type="circle">
+                    <i class="icon-tools icon-circle-black" data-default='icon-tools icon-circle-black'></i>
+                </li>
+                <li data-type="remove">
+                    <i class="icon-tools icon-remove-black" data-default='icon-tools icon-remove-black'></i>
+                </li>
+            </ul>
+            <div class="color-group">
+                <ul>
+                    <li id="red" class="color-item active" style="background-color: #FF0000;"></li>
+                    <li id="green" class="color-item" style="background-color: #00FF00;"></li>
+                    <li id="blue" class="color-item" style="background-color: #0000FF;"></li>
+                </ul>
+            </div>
+            <div class="button-group">
+                <a href="{{ url_for('gantrans.select')}}">
+                    <button id="submit" title="submit" class="icon-tools icon-submit-black"></button>
+                </a>
+                <button id="save" title="save" class="icon-tools icon-save-black"></button>
+            </div>
+        </div>
+        <div id="canvasDiv" class="canvasDiv">
+            <canvas id="c" width="1920" height="1080">请使用支持HTML5的浏览器</canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/fabric.js/2.1.0/fabric.min.js"></script>
+    <script src="{{ url_for('static', filename='js/FileSaver.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/test.js') }}"></script>
+</body>
+
+</html>

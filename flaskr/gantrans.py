@@ -25,6 +25,10 @@ def select():
     clean_old_uploads(app.config['UPLOAD_FOLDER'])
     return render_template('type-selection.html')
 
+@bp.route('/draw')
+def draw_pic():
+    return render_template('draw-picture.html')
+
 #选择模型尺度后上传图片
 @bp.route('/upload/<modeldimension>', methods=['GET', 'POST'])
 def upload_pic(modeldimension):

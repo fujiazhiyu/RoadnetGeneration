@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>选择模型</title>
+    <title>select model</title>
 </head>
 <body>
-    <h1>选择模型尺度</h1>
+    <h1>model dimension selection</h1>
     <ul id="navigation">
-        <li><a href="{{ url_for('gantrans.upload_pic', modeldimension='Small')}}"><button type="button">选择小模型</button></a></li>
+        <li><a href="{{ url_for('gantrans.upload_pic', modeldimension='Small')}}"><button type="button">select first model</button></a></li>
         <br/>
-        <li><a href="{{ url_for('gantrans.upload_pic', modeldimension='Large')}}"><button type="button">选择大模型</button></a></li>
+        <li><a href="{{ url_for('gantrans.upload_pic', modeldimension='Large')}}"><button type="button">select second model</button></a></li>
+        <br/>
+        <li><a href="{{ url_for('gantrans.draw_pic')}}"><button type="button">draw by yourself</button></a></li>
     </ul>
 </body>
 </html>

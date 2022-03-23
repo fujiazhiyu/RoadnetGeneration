@@ -5,14 +5,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>上传图片</title>
+    <title>upload picture</title>
 </head>
 <body>
     <h1>{{modeldimension}} Model Transform</h1>
-    <h4>注意：上传文件大小限制在300k以内</h4>
+    <h4>Attention: upload files must be limited in 300kb!</h4>
     <form method=post enctype=multipart/form-data>
-        <input type=file name=file>
-        <input type=submit value=Transform!>
+        <input type=file name=file value="Select File">
+        <input type=submit value="Transform!">
     </form>
+    <div>
+        <img src=''/>
+    </div>
 </body>
 </html>
