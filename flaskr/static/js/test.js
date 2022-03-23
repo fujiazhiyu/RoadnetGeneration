@@ -180,7 +180,8 @@
       case "line": //直线
         canvasObject = new fabric.Line([mouseFrom.x, mouseFrom.y, mouseTo.x, mouseTo.y], {
           stroke: color,
-          strokeWidth: drawWidth + 10,
+          strokeWidth: 6,
+	  strokeLineCap: "round",
           globalCompositeOperation: "lighter"
         });
         break;
